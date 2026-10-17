@@ -1,0 +1,108 @@
+{
+  "oracle": {
+    "successes": 100,
+    "episodes": 100,
+    "mean_steps_successful": 14.74,
+    "budget": 80
+  },
+  "datasets": [
+    {
+      "mode": "S0",
+      "split": "world_train",
+      "visible_samples": 874,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.05148741418764302
+    },
+    {
+      "mode": "S2",
+      "split": "world_train",
+      "visible_samples": 874,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.04691075514874142
+    },
+    {
+      "mode": "S3",
+      "split": "world_train",
+      "visible_samples": 874,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.04576659038901602
+    },
+    {
+      "mode": "S0",
+      "split": "probe_train",
+      "visible_samples": 787,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.053367217280813214
+    },
+    {
+      "mode": "S2",
+      "split": "probe_train",
+      "visible_samples": 787,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.04193138500635324
+    },
+    {
+      "mode": "S3",
+      "split": "probe_train",
+      "visible_samples": 787,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.048284625158831
+    },
+    {
+      "mode": "S0",
+      "split": "probe_val",
+      "visible_samples": 805,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.05714285714285714
+    },
+    {
+      "mode": "S2",
+      "split": "probe_val",
+      "visible_samples": 805,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.0422360248447205
+    },
+    {
+      "mode": "S3",
+      "split": "probe_val",
+      "visible_samples": 805,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.040993788819875775
+    },
+    {
+      "mode": "S0",
+      "split": "probe_test",
+      "visible_samples": 804,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.05845771144278607
+    },
+    {
+      "mode": "S2",
+      "split": "probe_test",
+      "visible_samples": 804,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.048507462686567165
+    },
+    {
+      "mode": "S3",
+      "split": "probe_test",
+      "visible_samples": 804,
+      "visible_classes": 30,
+      "episodes": 90,
+      "majority_identity_accuracy": 0.04228855721393035
+    }
+  ],
+  "paired_trajectories": true,
+  "scope": "Engineering checks only; not P1/P2/P3 learned-policy ablations."
+}
