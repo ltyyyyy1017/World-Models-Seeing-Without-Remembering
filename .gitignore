@@ -5,4 +5,5 @@ prototype/wheels/
 prototype/outputs/
 .github-upload/
 .pytest_cache/
+prototype/pytest-of-*/
 .workbuddy/

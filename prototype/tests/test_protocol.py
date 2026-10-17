@@ -70,12 +70,14 @@ def test_paired_initialization_and_finite_gradients():
     second = WorldModel(8)
     assert all(torch.equal(a, b) for a, b in zip(first.encoder.parameters(), second.encoder.parameters()))
     x, nxt = torch.rand(8, 3, 64, 64), torch.rand(8, 3, 64, 64)
-    for kind in ("A", "B", "C"):
-        first.zero_grad(set_to_none=True)
-        loss, metrics = loss_terms(first, x, nxt, torch.arange(8) % 5, kind)
-        loss.backward()
-        assert torch.isfinite(loss)
-        assert any(p.grad is not None and p.grad.abs().sum() > 0 for p in first.encoder.parameters())
+    for objective in ("mse", "contrastive"):
+        for kind in ("A", "B", "C"):
+            first.zero_grad(set_to_none=True)
+            loss, metrics = loss_terms(first, x, nxt, torch.arange(8) % 5, kind,
+                                       prediction_objective=objective)
+            loss.backward()
+            assert torch.isfinite(loss)
+            assert any(p.grad is not None and p.grad.abs().sum() > 0 for p in first.encoder.parameters())
 
 
 def test_oracle_upper_bound():
